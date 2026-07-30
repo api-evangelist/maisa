@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/maisaai/python-sdk
+docs: https://docs.maisa.ai/docs/sdk
+description: >-
+  Cross-cutting request/response semantics for the Maisa REST API, captured
+  from the official Stainless-generated Python and Node SDKs (the public docs
+  portal is gated behind AWS Cognito). Covers auth, versioning, retries, and
+  timeouts. No idempotency-key mechanism, cursor/offset pagination, or
+  documented rate-limit response headers were found in the public SDK surface;
+  those are recorded as not-documented rather than assumed.
+authentication:
+  style: api-key-header
+  header: X-API-Key
+  see: authentication/maisa-authentication.yml
+base_url: https://api.maisa.ai
+override_env: MAISA_BASE_URL
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: all documented operations are under /v1/*
+retries:
+  automatic: true
+  default_attempts: 2
+  strategy: short exponential backoff
+  note: certain errors are retried automatically by the SDK client
+timeout:
+  default_seconds: 60
+idempotency:
+  supported: unknown
+  note: no Idempotency-Key header documented in the public SDKs
+pagination:
+  style: none-documented
+  note: no list/pagination operations in the public API surface (all endpoints are POST actions)
+error_envelope:
+  see: errors/maisa-problem-types.yml
+  note: SDK maps HTTP status codes to typed error classes (Stainless taxonomy)
+request_tracing:
+  request_id_header: not-documented

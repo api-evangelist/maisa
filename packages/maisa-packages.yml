@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/maisaai
+description: >-
+  First-party Maisa API client libraries. Both are official Stainless-generated
+  SDKs published by the maisaai GitHub organization and verified against the
+  public package registries (PyPI JSON API and registry.npmjs.org). Both are
+  pre-release (alpha) at time of capture. There is no separate first-party CLI.
+packages:
+  - language: python
+    registry: pypi
+    name: maisa
+    url: https://pypi.org/project/maisa/
+    source: https://github.com/maisaai/python-sdk
+    install: pip install --pre maisa
+    version: 0.1.0a4
+    official: true
+    note: >-
+      "The official Python library for the Maisa API." Sync + async (httpx)
+      clients; Python 3.7+. Auth via MAISA_API_KEY env / api_key param.
+  - language: javascript
+    registry: npm
+    name: maisa
+    url: https://www.npmjs.com/package/maisa
+    source: https://github.com/maisaai/node-sdk
+    install: npm install --save maisa
+    version: 0.1.0-alpha.2
+    official: true
+    note: '"The official TypeScript library for the Maisa API."'

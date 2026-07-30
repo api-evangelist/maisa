@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of https://maisa.ai/.well-known/* and https://api.maisa.ai/.well-known/*
+hosts:
+  - host: https://maisa.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api.maisa.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+notes: >-
+  No public /.well-known discovery documents are served from either the maisa.ai
+  marketing apex or the api.maisa.ai API host (all 404). The API is
+  key-authenticated (X-API-Key), not OAuth/OIDC, so no authorization-server
+  metadata is expected. The docs portal (docs.maisa.ai) sits behind an AWS
+  Cognito login (issuer prod-maisa.auth.eu-west-1.amazoncognito.com); that is a
+  gate on the docs, not the key-authenticated REST API.

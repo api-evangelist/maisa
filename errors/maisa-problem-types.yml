@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: derived
+format: sdk-error-classes
+source: https://github.com/maisaai/python-sdk (Stainless SDK error taxonomy)
+description: >-
+  Maisa publishes no public OpenAPI spec (docs gated behind AWS Cognito), so
+  there is no server-side application/problem+json catalog to harvest. This is
+  the client-side error taxonomy the official Stainless-generated SDKs raise,
+  mapping HTTP status codes to typed error classes. Titles/remediation are the
+  standard meanings; message bodies come from the API at runtime. Not an
+  authoritative Maisa problem-type registry — a derived, honest starting point.
+problems:
+  - status: 400
+    error_class: BadRequestError
+    title: Bad request
+    remediation: Fix the request payload/parameters.
+  - status: 401
+    error_class: AuthenticationError
+    title: Authentication failed
+    remediation: Provide a valid X-API-Key (MAISA_API_KEY).
+  - status: 403
+    error_class: PermissionDeniedError
+    title: Permission denied
+    remediation: The key lacks access to this resource.
+  - status: 404
+    error_class: NotFoundError
+    title: Not found
+    remediation: Verify the resource path.
+  - status: 409
+    error_class: ConflictError
+    title: Conflict
+    remediation: Resolve the resource state conflict and retry.
+  - status: 422
+    error_class: UnprocessableEntityError
+    title: Unprocessable entity
+    remediation: Request was well-formed but semantically invalid.
+  - status: 429
+    error_class: RateLimitError
+    title: Too many requests
+    remediation: Back off and retry; the SDK retries automatically with backoff.
+  - status: 500
+    error_class: InternalServerError
+    title: Server error
+    remediation: Retry later; contact support@clibrain.com if persistent.
+  - status: null
+    error_class: APIConnectionError
+    title: Connection error
+    remediation: Network/transport failure reaching api.maisa.ai.

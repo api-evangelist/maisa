@@ -1,0 +1,60 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://github.com/maisaai/python-sdk (api.md operation surface)
+description: >-
+  No official hosted or published Maisa MCP server was found (searched the docs,
+  the maisaai GitHub org, and the MCP servers registry as of 2026-07-20). This
+  is a DERIVED candidate tool list, one tool per documented REST operation from
+  the official SDK api.md, provided as a starting point only — not a Maisa
+  claim. The API is key-authenticated (X-API-Key); base URL https://api.maisa.ai.
+server:
+  name: maisa
+  transport: http
+  url: null
+tools:
+  - name: capabilities_compare
+    description: Compare two pieces of text
+    source_operation: POST /v1/capabilities/compare
+  - name: capabilities_extract
+    description: Extract structured information from text
+    source_operation: POST /v1/capabilities/extract
+  - name: capabilities_summarize
+    description: Summarize text
+    source_operation: POST /v1/capabilities/summarize
+  - name: capabilities_media_compare
+    description: Compare media inputs
+    source_operation: POST /v1/capabilities/compare/media
+  - name: capabilities_media_extract
+    description: Extract from media inputs
+    source_operation: POST /v1/capabilities/extract/media
+  - name: capabilities_media_summarize
+    description: Summarize media inputs
+    source_operation: POST /v1/capabilities/summarize/media
+  - name: models_embeddings_create
+    description: Create embeddings
+    source_operation: POST /v1/models/embeddings
+  - name: models_rerank_create
+    description: Rerank documents against a query
+    source_operation: POST /v1/models/rerank
+  - name: kpu_run
+    description: Run a Knowledge Processing Unit (KPU) task
+    source_operation: POST /v1/kpu/run
+  - name: file_interpreter_from_pdf
+    description: Interpret a PDF file
+    source_operation: POST /v1/file-interpreter/from-pdf
+  - name: file_interpreter_from_docx
+    description: Interpret a DOCX file
+    source_operation: POST /v1/file-interpreter/from-docx
+  - name: file_interpreter_from_html
+    description: Interpret an HTML document
+    source_operation: POST /v1/file-interpreter/from-html
+  - name: file_interpreter_from_image
+    description: Interpret an image
+    source_operation: POST /v1/file-interpreter/from-image
+  - name: file_interpreter_from_audio
+    description: Interpret an audio file
+    source_operation: POST /v1/file-interpreter/from-audio
+  - name: mainet_search
+    description: Run a Mainet search
+    source_operation: POST /v1/mainet/search

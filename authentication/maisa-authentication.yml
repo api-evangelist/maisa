@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/maisaai/python-sdk
+docs: https://docs.maisa.ai/docs/sdk
+description: >-
+  The Maisa REST API (base URL https://api.maisa.ai) authenticates with a
+  static API key sent in a custom X-API-Key request header. The official SDKs
+  read the key from the MAISA_API_KEY environment variable or an api_key
+  constructor argument. There is no public OAuth/OIDC surface on the API host;
+  the docs portal (docs.maisa.ai) itself sits behind an AWS Cognito login, but
+  the API is key-authenticated. No OpenAPI securitySchemes block is publicly
+  available (docs are gated), so this profile is derived from the official
+  client libraries rather than a published spec.
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+  - name: apiKeyHeader
+    type: apiKey
+    in: header
+    parameter_name: X-API-Key
+    env_var: MAISA_API_KEY
+    sources: [https://github.com/maisaai/python-sdk, https://github.com/maisaai/node-sdk]
