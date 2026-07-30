@@ -1,7 +1,25 @@
 aid: maisa
 name: Maisa
-description: 'Maisa is a company surfaced as a portfolio company of creandum and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Maisa is an enterprise agentic-AI company whose platform, Maisa Studio, lets
+  non-technical teams build, deploy, and manage "Digital Workers" — AI agents
+  that automate complex, regulated, end-to-end business processes. Its
+  proprietary Knowledge Processing Unit (KPU) and Chain-of-Work approach combine
+  large and small language models to deliver deterministic, auditable,
+  hallucination-resistant execution rather than probabilistic responses, making
+  it regulator-ready from day one. Maisa targets highly regulated verticals —
+  banking and financial services, insurance, manufacturing and supply chain, and
+  engineering/infrastructure — with an employee-based pricing model instead of
+  per-token API billing. Maisa also exposes a developer REST API at
+  api.maisa.ai (API-key authenticated via X-API-Key) with capabilities
+  (compare/extract/summarize over text and media), models (embeddings, rerank),
+  a KPU run endpoint, a file-interpreter (PDF/DOCX/HTML/image/audio), and Mainet
+  search — with official first-party Python and Node SDKs both named "maisa";
+  the Maisa Studio product and the docs portal (docs.maisa.ai) sit behind an AWS
+  Cognito login. Backed by Creandum and ForgePoint, Maisa has raised a $25M
+  seed round and been named a Gartner front-runner in agentic AI. This profile
+  was enriched from Maisa's public marketing surface, llms.txt, and the official
+  open-source SDK repositories.
 url: https://raw.githubusercontent.com/api-evangelist/maisa/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,18 +27,92 @@ x-backed-by:
 - creandum
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20T12:00:00Z'
+image: https://maisa.ai/favicon.ico
 tags:
 - Company
 - Ai
-apis: []
+- Agentic AI
+- AI Agents
+- Digital Workers
+- Business Process Automation
+- Enterprise Automation
+- Banking
+- Insurance
+apis:
+- name: Maisa API
+  description: >-
+    Maisa's developer REST API. Key-authenticated (X-API-Key), base URL
+    https://api.maisa.ai, all operations under /v1. Surfaces: capabilities
+    (compare/extract/summarize over text and media), models (embeddings,
+    rerank), KPU run, file-interpreter (from PDF/DOCX/HTML/image/audio), and
+    Mainet search — 15 documented operations. No public OpenAPI spec (docs are
+    gated); operation surface captured from the official SDKs' api.md.
+  humanURL: https://docs.maisa.ai/docs/sdk
+  baseURL: https://api.maisa.ai
+  properties:
+  - type: APIReference
+    url: https://docs.maisa.ai/docs/sdk
+  - type: Authentication
+    url: authentication/maisa-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/maisa-domain-security.yml
+- type: LLMsTxt
+  url: llms/maisa-llms.txt
+- type: WellKnown
+  url: well-known/maisa-well-known.yml
+- type: Packages
+  url: packages/maisa-packages.yml
+- type: SDKs
+  url: packages/maisa-packages.yml
+- type: Authentication
+  url: authentication/maisa-authentication.yml
+- type: Conventions
+  url: conventions/maisa-conventions.yml
+- type: ErrorCatalog
+  url: errors/maisa-problem-types.yml
+- type: MCPServer
+  url: mcp/maisa-mcp.yml
+- type: APIReference
+  url: https://docs.maisa.ai/docs/sdk
+- type: GitHubOrganization
+  url: https://github.com/maisaai
 - type: Website
   url: https://maisa.ai/
+- type: Documentation
+  url: https://docs.maisa.ai/
+- type: Blog
+  url: https://maisa.ai/agentic-insights/
+- type: BlogRSS
+  url: https://maisa.ai/agentic-insights/feed/
+- type: Support
+  url: https://maisa.ai/contact/
+- type: TermsOfService
+  url: https://maisa.ai/terms-of-service/
+- type: PrivacyPolicy
+  url: https://maisa.ai/privacy-policy/
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
