@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Maisa is a company surfaced as a portfolio company of creandum and added to the API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.
+Maisa is an enterprise agentic-AI company whose platform, Maisa Studio, lets non-technical teams build, deploy, and manage "Digital Workers" — AI agents that automate complex, regulated, end-to-end business processes. Its proprietary Knowledge Processing Unit (KPU) and Chain-of-Work approach combine large and small language models to deliver deterministic, auditable, hallucination-resistant execution rather than probabilistic responses, making it regulator-ready from day one. Maisa targets highly regulated verticals — banking and financial services, insurance, manufacturing and supply chain, and engineering/infrastructure — with an employee-based pricing model instead of per-token API billing. Maisa also exposes a developer REST API at api.maisa.ai (API-key authenticated via X-API-Key) with capabilities (compare/extract/summarize over text and media), models (embeddings, rerank), a KPU run endpoint, a file-interpreter (PDF/DOCX/HTML/image/audio), and Mainet search — with official first-party Python and Node SDKs both named "maisa"; the Maisa Studio product and the docs portal (docs.maisa.ai) sit behind an AWS Cognito login. Backed by Creandum and ForgePoint, Maisa has raised a $25M seed round and been named a Gartner front-runner in agentic AI. This profile was enriched from Maisa's public marketing surface, llms.txt, and the official open-source SDK repositories.
 
-Backed by: creandum — https://maisa.ai/
+**Areas:** Company · Artificial Intelligence · AI Agents · Digital Workers · Business Process Automation · Enterprise Automation · Banking · Insurance
+
+## Maisa on APIs.io
+
+Everything profiled for Maisa is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/maisa/](https://apis.io/providers/maisa/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Maisa API](https://apis.io/apis/maisa/maisa-api/) — Maisa's developer REST API. Key-authenticated (X-API-Key), base URL https://api.maisa.ai, all operations under /v1. Surfaces: capabilities…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [maisa](https://apis.io/servers/maisa/maisa/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Maisa Authentication](https://apis.io/security/maisa/maisa-authentication/)
+- [Maisa Domain Security](https://apis.io/security/maisa/maisa-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://maisa.ai/)
+- [Documentation](https://docs.maisa.ai/)
+- [API reference](https://docs.maisa.ai/docs/sdk)
+- [Support](https://maisa.ai/contact/)
+- [Blog](https://maisa.ai/agentic-insights/)
+- [Terms of service](https://maisa.ai/terms-of-service/)
+- [Privacy policy](https://maisa.ai/privacy-policy/)
+- [GitHub](https://github.com/maisaai)
+
+## API Evangelist rating
+
+**Kin Score 17.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 21.1 |
+
+**Agent readiness 3.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.4** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/maisa/](https://apis.io/providers/maisa/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Maisa: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/maisa/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
